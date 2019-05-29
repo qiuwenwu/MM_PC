@@ -159,3 +159,8 @@ F:\MM_PC\MM_PC\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
 F:\MM_PC\MM_PC\bin\x86\Debug\MM.Engine.xml
 F:\MM_PC\MM_PC\bin\x86\Debug\Newtonsoft.Json.dll
 F:\MM_PC\MM_PC\bin\x86\Debug\Newtonsoft.Json.xml
+F:\MM_PC\MM_PC\bin\x86\Debug\Microsoft.Extensions.Options.dll
+F:\MM_PC\MM_PC\bin\x86\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\MM_PC\MM_PC\bin\x86\Debug\Microsoft.Extensions.Primitives.dll
+F:\MM_PC\MM_PC\bin\x86\Debug\System.Memory.dll
+F:\MM_PC\MM_PC\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll

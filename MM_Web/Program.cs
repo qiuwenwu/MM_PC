@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -15,7 +14,7 @@ namespace MM_Web
         /// <summary>
         /// 目录
         /// </summary>
-        public static string Dir = AppDomain.CurrentDomain.BaseDirectory;
+        public static string Dir = Directory.GetCurrentDirectory() + "\\";
 
         /// <summary>
         /// 监听主机地址
@@ -28,7 +27,7 @@ namespace MM_Web
         /// <param name="args">启动参数</param>
         public static void Main(string[] args)
         {
-            var file = Dir + @"\config\web.json";
+            var file = Dir + @"config\web.json";
             if (File.Exists(file)) {
                 var text = File.ReadAllText(file);
                 var dy = JsonConvert.DeserializeObject<Dictionary<string, object>>(text);

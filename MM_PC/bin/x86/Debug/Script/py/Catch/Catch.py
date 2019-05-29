@@ -12,8 +12,8 @@ import httplib
 #fun: 函数名(字符串)
 #tag: 标签(字符串)
 #jsonStr: 请求参数(json格式字符串)
-def Main(fun = None, paramA = None, paramB = None, paramC = None):
-	Engine.Unload("./test.py")
-	log = SDK.Log()
-	log.WriteLine("1测试启动")
+def Run(fun = None, paramA = None, paramB = None, paramC = None):
+	Service.CleanupPy("Catch\\Catch")
+	Sdk.Log.WriteLine("1测试启动")
+	
 	return "123"

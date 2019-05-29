@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using System.IO;
 
 namespace MM_Web
@@ -51,7 +50,7 @@ namespace MM_Web
                     }
                     p += ".html";
                 }
-                var file = Program.Dir + @"\wwwroot" + p.Replace("/", "\\");
+                var file = Program.Dir + @"wwwroot" + p.Replace("/", "\\");
 
                 if (File.Exists(file))
                 {

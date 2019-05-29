@@ -16,7 +16,7 @@
     </Window.Resources>
     <Grid>
         <WindowsFormsHost>
-            <wf:WebKitBrowser x:Name="Browser1" DocumentCompleted="Browser1_DocumentCompleted"></wf:WebKitBrowser>
+            <wf:WebKitBrowser x:Name="Browser1" DocumentCompleted="Browser1_DocumentCompleted" Load="Browser1_Load"></wf:WebKitBrowser>
         </WindowsFormsHost>
     </Grid>
 </Window>

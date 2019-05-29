@@ -29,8 +29,28 @@ namespace MM_PC
         /// <summary>
         /// 系统服务帮助类
         /// </summary>
-        public SystemHelper sys = new SystemHelper();
+        public static SystemHelper sys = new SystemHelper();
 
+        public static Cache Cache = new Cache();
+
+
+        /// <summary>
+        /// 获取程序路径
+        /// </summary>
+        /// <returns>返回全路径</returns>
+        public string RunPath()
+        {
+            return Cache.RunPath;
+        }
+
+        /// <summary>
+        /// 加载进度 0 - 100
+        /// </summary>
+        /// <returns>返回进度值</returns>
+        public double Loading()
+        {
+            return Cache.Loading;
+        }
 
         /// <summary>
         /// 获取脚本执行错误
