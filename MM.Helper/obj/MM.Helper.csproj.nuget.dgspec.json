@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\MM_PC\\MM.Helper\\MM.Helper.csproj": {}
+  },
+  "projects": {
+    "F:\\MM_PC\\MM.Helper\\MM.Helper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\MM_PC\\MM.Helper\\MM.Helper.csproj",
+        "projectName": "MM.Helper",
+        "projectPath": "F:\\MM_PC\\MM.Helper\\MM.Helper.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "F:\\MM_PC\\MM.Helper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.50.5, )"
+            },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.15, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "NPOI": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "ServiceStack.Redis": {
+              "target": "Package",
+              "version": "[5.4.0, )"
+            },
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.109.2, )"
+            },
+            "Z.Expressions.Eval": {
+              "target": "Package",
+              "version": "[2.9.5, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+F:\MM\MM.Helper\bin\Release\netstandard2.0\MM.Helper.deps.json
+F:\MM\MM.Helper\bin\Release\netstandard2.0\MM.Helper.dll
+F:\MM\MM.Helper\bin\Release\netstandard2.0\MM.Helper.pdb
+F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.csprojAssemblyReference.cache
+F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.csproj.CoreCompileInputs.cache
+F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.AssemblyInfoInputs.cache
+F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.AssemblyInfo.cs
+F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.dll
+F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.pdb
+F:\MM\MM.Helper\bin\Release\netstandard2.0\MM.Helper.xml
