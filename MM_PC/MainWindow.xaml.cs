@@ -29,7 +29,7 @@ namespace MM_PC
             External = new External(this);
 
             // Viewer.DocumentText = "<html><body>123123</body></html>";
-            Browser1.Navigate("http://www.baidu.com");
+            Browser1.Navigate("http://localhost:9191");
             //  Viewer.CreateObjRef(CallbackClass.GetType());
         }
 

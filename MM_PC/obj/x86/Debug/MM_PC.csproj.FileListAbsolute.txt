@@ -118,7 +118,6 @@ F:\MM_PC\MM_PC\obj\x86\Debug\MM_PC.exe.config
 F:\MM_PC\MM_PC\bin\x86\Debug\MM.Engine.dll
 F:\MM_PC\MM_PC\bin\x86\Debug\MM.Engine.pdb
 F:\MM_PC\MM_PC\obj\x86\Debug\Skins\MainSkin.baml
-F:\MM_PC\MM_PC\obj\x86\Debug\MM_PC_Content.g.cs
 F:\MM_PC\MM_PC\bin\x86\Debug\lua53.dll
 F:\MM_PC\MM_PC\bin\x86\Debug\liblua53.dylib
 F:\MM_PC\MM_PC\bin\x86\Debug\Microsoft.WindowsAPICodePack.dll
@@ -157,3 +156,6 @@ F:\MM_PC\MM_PC\bin\x86\Debug\KeraLua.xml
 F:\MM_PC\MM_PC\bin\x86\Debug\System.Web.Razor.xml
 F:\MM_PC\MM_PC\bin\x86\Debug\Microsoft.Dynamic.xml
 F:\MM_PC\MM_PC\bin\x86\Debug\Microsoft.Scripting.Metadata.xml
+F:\MM_PC\MM_PC\bin\x86\Debug\MM.Engine.xml
+F:\MM_PC\MM_PC\bin\x86\Debug\Newtonsoft.Json.dll
+F:\MM_PC\MM_PC\bin\x86\Debug\Newtonsoft.Json.xml

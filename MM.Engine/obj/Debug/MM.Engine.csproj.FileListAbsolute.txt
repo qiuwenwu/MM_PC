@@ -144,3 +144,6 @@ F:\MM_PC\MM.Engine\bin\Debug\RazorEngine.xml
 F:\MM_PC\MM.Engine\bin\Debug\System.Collections.Immutable.xml
 F:\MM_PC\MM.Engine\bin\Debug\System.Reflection.Metadata.xml
 F:\MM_PC\MM.Engine\bin\Debug\System.Web.Razor.xml
+F:\MM_PC\MM.Engine\bin\Debug\MM.Engine.xml
+F:\MM_PC\MM.Engine\bin\Debug\Newtonsoft.Json.dll
+F:\MM_PC\MM.Engine\bin\Debug\Newtonsoft.Json.xml

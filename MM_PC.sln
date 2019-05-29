@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MM.Helper", "MM.Helper\MM.H
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MM.Engine", "MM.Engine\MM.Engine.csproj", "{A0101ECE-C72F-4A6E-B8EF-3408E2725CD4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MM_Web", "MM_Web\MM_Web.csproj", "{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,14 @@ Global
 		{A0101ECE-C72F-4A6E-B8EF-3408E2725CD4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A0101ECE-C72F-4A6E-B8EF-3408E2725CD4}.Release|x86.ActiveCfg = Release|Any CPU
 		{A0101ECE-C72F-4A6E-B8EF-3408E2725CD4}.Release|x86.Build.0 = Release|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Debug|x86.Build.0 = Debug|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Release|x86.ActiveCfg = Release|Any CPU
+		{13D9E5BE-8CB7-46B2-BBE7-93EE674A3F81}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

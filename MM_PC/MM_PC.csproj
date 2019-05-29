@@ -140,9 +140,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="wwwroot\fonts\element-icons.woff" />
-    <None Include="wwwroot\script\py\Catch\1778.py" />
-    <None Include="wwwroot\script\py\Catch\Catch.py" />
+    <None Include="Script\py\Catch\1778.py" />
+    <None Include="Script\py\test.py" />
+    <None Include="Script\py\Catch\Catch.py" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -158,20 +158,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="mm.ico" />
-    <Content Include="wwwroot\404.html" />
-    <Content Include="wwwroot\css\index.css" />
-    <Content Include="wwwroot\index.html" />
-    <Content Include="wwwroot\js\com.js" />
-    <Content Include="wwwroot\js\index.js" />
-    <Content Include="wwwroot\js\polyfill.min.js" />
-    <Content Include="wwwroot\js\vue.js" />
-    <Content Include="wwwroot\js\wpf.js" />
-    <Content Include="wwwroot\js\zepto.min.js" />
+    <Resource Include="favicon.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-    <Folder Include="wwwroot\script\py\Test\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

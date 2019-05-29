@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:wf="clr-namespace:WebKit;assembly=OpenWebKitSharp"
         mc:Ignorable="d"
-        Title="超级美眉PC应用" Height="450" Width="800" Loaded="MainWindow1_Loaded" Closing="MainWindow1_Closing" Icon="mm.ico" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center">
+        Title="超级美眉PC应用" Height="450" Width="800" Loaded="MainWindow1_Loaded" Closing="MainWindow1_Closing" Icon="favicon.ico" WindowStartupLocation="CenterScreen" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center">
 
     <Window.Resources>
         <ResourceDictionary>

@@ -7,7 +7,9 @@ using System.Windows;
 
 namespace MM_PC
 {
-    //记得加上这个特性
+    /// <summary>
+    /// 提供给外部使用的类
+    /// </summary>
     [PermissionSet(SecurityAction.Demand, Name = "FullTrust")]
     [ComVisible(true)]  // 将该类设置为com可访问
     public class External
@@ -59,16 +61,21 @@ namespace MM_PC
         /// <returns>返回执行结果</returns>
         public object CallScript(string appName, object fun, object param1 = null, object param2 = null, object param3 = null)
         {
-            return eng.Run(appName,  fun,  param1, param2, param3);
+            var ret = eng.Run(appName, fun, param1, param2, param3);
+            if (ret == null) {
+                MessageBox.Show(eng.Ex, "调用脚本发生异常");
+            }
+            return ret;
         }
 
         /// <summary>
         /// 给js调用的提示框
         /// </summary>
         /// <param name="text">显示消息</param>
-        public void MsgBox(string text)
+        /// <param name="title">显示标题</param>
+        public void MsgBox(string text, string title = null)
         {
-            MessageBox.Show(text);
+            MessageBox.Show(text, title);
         }
 
         /// <summary>
