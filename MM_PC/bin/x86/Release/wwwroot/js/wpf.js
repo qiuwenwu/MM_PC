@@ -25,13 +25,6 @@ function getError() {
     return window.external.getError();
 }
 
-/// 测试调用脚本
-function test() {
-    var tx = callScript("./script/test.py", "测试", "测试", "测试");
-    msgBox(tx, "测试脚本");
-    msgBox(getError(), "测试脚本");
-    newWindow("http://www.baidu.com", "超级美眉介绍");
-}
 
 /// 弹出打开文件框
 /// directory：目录
@@ -85,4 +78,12 @@ function resotreSleep() {
 /// title：标题
 function newWindow(url, title) {
     return window.external.NewWindow(url, title);
+}
+
+/// 测试调用脚本
+function test() {
+    var tx = callScript("./script/test.py", "测试", "测试", "测试");
+    msgBox(tx, "测试脚本");
+    msgBox(getError(), "测试脚本");
+    newWindow("http://www.baidu.com", "超级美眉介绍");
 }

@@ -185,3 +185,5 @@ F:\MM_PC\MM_PC\obj\x86\Release\MM_PC.application
 F:\MM_PC\MM_PC\obj\x86\Release\MM_PC.csproj.CopyComplete
 F:\MM_PC\MM_PC\obj\x86\Release\MM_PC.exe
 F:\MM_PC\MM_PC\obj\x86\Release\MM_PC.pdb
+F:\MM_PC\MM_PC\bin\x86\Release\JSCore.dll
+F:\MM_PC\MM_PC\bin\x86\Release\OpenWebKitSharp.dll
