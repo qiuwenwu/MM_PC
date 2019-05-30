@@ -8,3 +8,13 @@ F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.AssemblyInfo.cs
 F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.dll
 F:\MM\MM.Helper\obj\Release\netstandard2.0\MM.Helper.pdb
 F:\MM\MM.Helper\bin\Release\netstandard2.0\MM.Helper.xml
+F:\MM_PC\MM.Helper\bin\Release\netstandard2.0\MM.Helper.deps.json
+F:\MM_PC\MM.Helper\bin\Release\netstandard2.0\MM.Helper.dll
+F:\MM_PC\MM.Helper\bin\Release\netstandard2.0\MM.Helper.pdb
+F:\MM_PC\MM.Helper\bin\Release\netstandard2.0\MM.Helper.xml
+F:\MM_PC\MM.Helper\obj\Release\netstandard2.0\MM.Helper.csprojAssemblyReference.cache
+F:\MM_PC\MM.Helper\obj\Release\netstandard2.0\MM.Helper.csproj.CoreCompileInputs.cache
+F:\MM_PC\MM.Helper\obj\Release\netstandard2.0\MM.Helper.AssemblyInfoInputs.cache
+F:\MM_PC\MM.Helper\obj\Release\netstandard2.0\MM.Helper.AssemblyInfo.cs
+F:\MM_PC\MM.Helper\obj\Release\netstandard2.0\MM.Helper.dll
+F:\MM_PC\MM.Helper\obj\Release\netstandard2.0\MM.Helper.pdb

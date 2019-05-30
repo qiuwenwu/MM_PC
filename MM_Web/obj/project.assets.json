@@ -2,6 +2,45 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
+      "Dapper/1.50.5": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Data",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net451/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Dapper.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Google.Protobuf/3.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Google.Protobuf.dll": {}
+        }
+      },
       "Microsoft.AspNetCore/2.1.7": {
         "type": "package",
         "dependencies": {
@@ -393,6 +432,32 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
+      "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -707,6 +772,32 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "MySql.Data/8.0.15": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.5.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.ComponentModel",
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration",
+          "System.Configuration.Install",
+          "System.Data",
+          "System.Drawing",
+          "System.Drawing.Design",
+          "System.Management",
+          "System.Transactions",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net452/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MySql.Data.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
@@ -714,6 +805,80 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NPOI/2.4.1": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/NPOI.OOXML.dll": {},
+          "lib/net45/NPOI.OpenXml4Net.dll": {},
+          "lib/net45/NPOI.OpenXmlFormats.dll": {},
+          "lib/net45/NPOI.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NPOI.OOXML.dll": {},
+          "lib/net45/NPOI.OpenXml4Net.dll": {},
+          "lib/net45/NPOI.OpenXmlFormats.dll": {},
+          "lib/net45/NPOI.dll": {}
+        }
+      },
+      "ServiceStack.Common/5.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ServiceStack.Interfaces": "5.4.0",
+          "ServiceStack.Text": "5.4.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net45/ServiceStack.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Common.dll": {}
+        }
+      },
+      "ServiceStack.Interfaces/5.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/ServiceStack.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Interfaces.dll": {}
+        }
+      },
+      "ServiceStack.Redis/5.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ServiceStack.Common": "5.4.0"
+        },
+        "compile": {
+          "lib/net45/ServiceStack.Redis.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Redis.dll": {}
+        }
+      },
+      "ServiceStack.Text/5.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.1"
+        },
+        "compile": {
+          "lib/net45/ServiceStack.Text.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Text.dll": {}
+        }
+      },
+      "SharpZipLib/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ICSharpCode.SharpZipLib.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -748,6 +913,65 @@
         },
         "runtime": {
           "lib/net461/System.ComponentModel.Annotations.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.109.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.109.2",
+          "System.Data.SQLite.EF6": "1.0.109",
+          "System.Data.SQLite.Linq": "1.0.109"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.109.2": {
+        "type": "package",
+        "compile": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        },
+        "build": {
+          "build/net46/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.109": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.2.0"
+        },
+        "compile": {
+          "lib/net46/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.109": {
+        "type": "package",
+        "compile": {
+          "lib/net46/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.Linq.dll": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/4.5.0": {
@@ -883,9 +1107,102 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ValueTuple.dll": {}
+        }
+      },
+      "Z.Expressions.Eval/2.9.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Z.Expressions.Eval.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Z.Expressions.Eval.dll": {}
+        }
+      },
+      "MM.Engine/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MM.Helper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MM.Engine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MM.Engine.dll": {}
+        }
+      },
+      "MM.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Dapper": "1.50.5",
+          "Microsoft.Extensions.Caching.Memory": "2.2.0",
+          "MySql.Data": "8.0.15",
+          "NPOI": "2.4.1",
+          "Newtonsoft.Json": "12.0.2",
+          "ServiceStack.Redis": "5.4.0",
+          "System.Data.SQLite": "1.0.109.2",
+          "Z.Expressions.Eval": "2.9.5"
+        },
+        "compile": {
+          "bin/placeholder/MM.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MM.Helper.dll": {}
+        }
       }
     },
     ".NETFramework,Version=v4.6.1/win7-x86": {
+      "Dapper/1.50.5": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Data",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net451/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Dapper.dll": {}
+        }
+      },
+      "EntityFramework/6.2.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        }
+      },
+      "Google.Protobuf/3.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Google.Protobuf.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Google.Protobuf.dll": {}
+        }
+      },
       "Microsoft.AspNetCore/2.1.7": {
         "type": "package",
         "dependencies": {
@@ -1277,6 +1594,32 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
+      "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration/2.1.1": {
         "type": "package",
         "dependencies": {
@@ -1591,6 +1934,32 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "MySql.Data/8.0.15": {
+        "type": "package",
+        "dependencies": {
+          "Google.Protobuf": "3.5.1"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.ComponentModel",
+          "System.ComponentModel.DataAnnotations",
+          "System.Configuration",
+          "System.Configuration.Install",
+          "System.Data",
+          "System.Drawing",
+          "System.Drawing.Design",
+          "System.Management",
+          "System.Transactions",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net452/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MySql.Data.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.2": {
         "type": "package",
         "compile": {
@@ -1598,6 +1967,80 @@
         },
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NPOI/2.4.1": {
+        "type": "package",
+        "dependencies": {
+          "SharpZipLib": "1.0.0"
+        },
+        "compile": {
+          "lib/net45/NPOI.OOXML.dll": {},
+          "lib/net45/NPOI.OpenXml4Net.dll": {},
+          "lib/net45/NPOI.OpenXmlFormats.dll": {},
+          "lib/net45/NPOI.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NPOI.OOXML.dll": {},
+          "lib/net45/NPOI.OpenXml4Net.dll": {},
+          "lib/net45/NPOI.OpenXmlFormats.dll": {},
+          "lib/net45/NPOI.dll": {}
+        }
+      },
+      "ServiceStack.Common/5.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ServiceStack.Interfaces": "5.4.0",
+          "ServiceStack.Text": "5.4.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "compile": {
+          "lib/net45/ServiceStack.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Common.dll": {}
+        }
+      },
+      "ServiceStack.Interfaces/5.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/ServiceStack.Interfaces.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Interfaces.dll": {}
+        }
+      },
+      "ServiceStack.Redis/5.4.0": {
+        "type": "package",
+        "dependencies": {
+          "ServiceStack.Common": "5.4.0"
+        },
+        "compile": {
+          "lib/net45/ServiceStack.Redis.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Redis.dll": {}
+        }
+      },
+      "ServiceStack.Text/5.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.1"
+        },
+        "compile": {
+          "lib/net45/ServiceStack.Text.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ServiceStack.Text.dll": {}
+        }
+      },
+      "SharpZipLib/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/net45/ICSharpCode.SharpZipLib.dll": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -1632,6 +2075,47 @@
         },
         "runtime": {
           "lib/net461/System.ComponentModel.Annotations.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.109.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.109.2",
+          "System.Data.SQLite.EF6": "1.0.109",
+          "System.Data.SQLite.Linq": "1.0.109"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.109.2": {
+        "type": "package",
+        "compile": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.dll": {}
+        },
+        "build": {
+          "build/net46/_._": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.109": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.2.0"
+        },
+        "compile": {
+          "lib/net46/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.109": {
+        "type": "package",
+        "compile": {
+          "lib/net46/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Data.SQLite.Linq.dll": {}
         }
       },
       "System.Diagnostics.DiagnosticSource/4.5.0": {
@@ -1755,10 +2239,126 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
+      },
+      "System.ValueTuple/4.5.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.ValueTuple.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.ValueTuple.dll": {}
+        }
+      },
+      "Z.Expressions.Eval/2.9.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Z.Expressions.Eval.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Z.Expressions.Eval.dll": {}
+        }
+      },
+      "MM.Engine/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "MM.Helper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MM.Engine.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MM.Engine.dll": {}
+        }
+      },
+      "MM.Helper/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Dapper": "1.50.5",
+          "Microsoft.Extensions.Caching.Memory": "2.2.0",
+          "MySql.Data": "8.0.15",
+          "NPOI": "2.4.1",
+          "Newtonsoft.Json": "12.0.2",
+          "ServiceStack.Redis": "5.4.0",
+          "System.Data.SQLite": "1.0.109.2",
+          "Z.Expressions.Eval": "2.9.5"
+        },
+        "compile": {
+          "bin/placeholder/MM.Helper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MM.Helper.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Dapper/1.50.5": {
+      "sha512": "1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
+      "type": "package",
+      "path": "dapper/1.50.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.1.50.5.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net451/Dapper.dll",
+        "lib/net451/Dapper.xml",
+        "lib/netstandard1.3/Dapper.dll",
+        "lib/netstandard1.3/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "EntityFramework/6.2.0": {
+      "sha512": "ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+      "type": "package",
+      "path": "entityframework/6.2.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.transform",
+        "entityframework.6.2.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "tools/EntityFramework.PowerShell.Utility.dll",
+        "tools/EntityFramework.PowerShell.dll",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/about_EntityFramework.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/migrate.exe"
+      ]
+    },
+    "Google.Protobuf/3.5.1": {
+      "sha512": "f2k1VNaB9bfvEsvARzzEL1TZiIpL33KKK3JMH7UANlPlJVptuvsk4qpBZEnz0pORWZOdUHlVwMQuUzFqjJYCxA==",
+      "type": "package",
+      "path": "google.protobuf/3.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "google.protobuf.3.5.1.nupkg.sha512",
+        "google.protobuf.nuspec",
+        "lib/net45/Google.Protobuf.dll",
+        "lib/net45/Google.Protobuf.xml",
+        "lib/netstandard1.0/Google.Protobuf.dll",
+        "lib/netstandard1.0/Google.Protobuf.xml"
+      ]
+    },
     "Microsoft.AspNetCore/2.1.7": {
       "sha512": "WJ8au6vYsXdwEBus9CNVAtaTtcJ6Gwr+s2Sxw6mWq/smxINliIbE68YaD8WDqJbwuyrIHlTEJPS53tyohYL7VQ==",
       "type": "package",
@@ -2088,6 +2688,32 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
         "microsoft.aspnetcore.webutilities.2.1.1.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
+      "sha512": "spsJkYo8gGJapaxTSQFN/wqA+ghpJMLwB4ZyTB+fSdpd7AmMFP/YSpIcGmczcw4KggpxLGhLk7lCkSIlgvHaqQ==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "microsoft.extensions.caching.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Memory/2.2.0": {
+      "sha512": "yFs44RzB2Pzfoj4uk+mEz3MTTQKyeWb8gDhv5GyVPfHnLv0eQhGwzbw/5WpxAcVyOgG/H3/0ULY6g0/7/B+r7w==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.memory/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.xml",
+        "microsoft.extensions.caching.memory.2.2.0.nupkg.sha512",
+        "microsoft.extensions.caching.memory.nuspec"
       ]
     },
     "Microsoft.Extensions.Configuration/2.1.1": {
@@ -2421,6 +3047,25 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
+    "MySql.Data/8.0.15": {
+      "sha512": "ZKqJdSsIHoBQZbGUT6KNWdq+22NBPLxcrsnBj5BSLmVePRhrlCQew8jq38hLoJCoubdc4zP1D0xJo3DYgeuIpg==",
+      "type": "package",
+      "path": "mysql.data/8.0.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MySql.Data.dll",
+        "lib/net452/MySql.Data.xml",
+        "lib/netcoreapp2.0/MySql.Data.dll",
+        "lib/netcoreapp2.0/MySql.Data.xml",
+        "lib/netstandard1.6/MySql.Data.dll",
+        "lib/netstandard1.6/MySql.Data.xml",
+        "lib/netstandard2.0/MySql.Data.dll",
+        "lib/netstandard2.0/MySql.Data.xml",
+        "mysql.data.8.0.15.nupkg.sha512",
+        "mysql.data.nuspec"
+      ]
+    },
     "Newtonsoft.Json/12.0.2": {
       "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "type": "package",
@@ -2449,6 +3094,122 @@
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "newtonsoft.json.12.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec"
+      ]
+    },
+    "NPOI/2.4.1": {
+      "sha512": "k6KgsGWQpODQcIo7SwTw4j0be6qILTQlk7xKMEPQjp1Bz3+YaUZSvQ/ePG5vcLKnzGDgGGN1TccvYccmrZU53g==",
+      "type": "package",
+      "path": "npoi/2.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "Read Me.txt",
+        "lib/NPOI.xml",
+        "lib/net40/NPOI.OOXML.dll",
+        "lib/net40/NPOI.OpenXml4Net.dll",
+        "lib/net40/NPOI.OpenXmlFormats.dll",
+        "lib/net40/NPOI.dll",
+        "lib/net45/NPOI.OOXML.dll",
+        "lib/net45/NPOI.OpenXml4Net.dll",
+        "lib/net45/NPOI.OpenXmlFormats.dll",
+        "lib/net45/NPOI.dll",
+        "lib/netstandard2.0/NPOI.OOXML.deps.json",
+        "lib/netstandard2.0/NPOI.OOXML.dll",
+        "lib/netstandard2.0/NPOI.OpenXml4Net.deps.json",
+        "lib/netstandard2.0/NPOI.OpenXml4Net.dll",
+        "lib/netstandard2.0/NPOI.OpenXmlFormats.deps.json",
+        "lib/netstandard2.0/NPOI.OpenXmlFormats.dll",
+        "lib/netstandard2.0/NPOI.deps.json",
+        "lib/netstandard2.0/NPOI.dll",
+        "logo/120_120.jpg",
+        "logo/240_240.png",
+        "logo/32_32.jpg",
+        "logo/60_60.jpg",
+        "npoi.2.4.1.nupkg.sha512",
+        "npoi.nuspec"
+      ]
+    },
+    "ServiceStack.Common/5.4.0": {
+      "sha512": "sjd49YXvoffIu/QkTExD+u6k6Bf5W5MYE83rknTFA/lmh0YQcFiFoi6BqHsR2y2yTM9kIdrUlFatfsXDbwPgyw==",
+      "type": "package",
+      "path": "servicestack.common/5.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ServiceStack.Common.dll",
+        "lib/net45/ServiceStack.Common.xml",
+        "lib/netstandard2.0/ServiceStack.Common.deps.json",
+        "lib/netstandard2.0/ServiceStack.Common.dll",
+        "lib/netstandard2.0/ServiceStack.Common.xml",
+        "servicestack.common.5.4.0.nupkg.sha512",
+        "servicestack.common.nuspec"
+      ]
+    },
+    "ServiceStack.Interfaces/5.4.0": {
+      "sha512": "7nQdM1QAGnqtoPD3W+PJFZOmKSNHJiHJVCFSxuzsP29Xzuzw1xuM3IPPTpJ87SyxAt4PRKMVp3E2oEzGav54Fw==",
+      "type": "package",
+      "path": "servicestack.interfaces/5.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ServiceStack.Interfaces.dll",
+        "lib/net45/ServiceStack.Interfaces.xml",
+        "lib/netstandard2.0/ServiceStack.Interfaces.deps.json",
+        "lib/netstandard2.0/ServiceStack.Interfaces.dll",
+        "lib/netstandard2.0/ServiceStack.Interfaces.xml",
+        "servicestack.interfaces.5.4.0.nupkg.sha512",
+        "servicestack.interfaces.nuspec"
+      ]
+    },
+    "ServiceStack.Redis/5.4.0": {
+      "sha512": "ApYek1j7zP7DmStTrInlVPogBML+tc6uKAgawwTx+0pTPyIJMqG9IMJ/0o7tnbSscESK8KkyiVEOy+DQIWZc8w==",
+      "type": "package",
+      "path": "servicestack.redis/5.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ServiceStack.Redis.dll",
+        "lib/net45/ServiceStack.Redis.xml",
+        "lib/netstandard2.0/ServiceStack.Redis.deps.json",
+        "lib/netstandard2.0/ServiceStack.Redis.dll",
+        "lib/netstandard2.0/ServiceStack.Redis.xml",
+        "servicestack.redis.5.4.0.nupkg.sha512",
+        "servicestack.redis.nuspec"
+      ]
+    },
+    "ServiceStack.Text/5.4.0": {
+      "sha512": "N+8xYwi3ARlvyAej4mYAX9PXGyIRlkemU8Xk4A/R8IgCepS4TgjubXuJKZfh0zsJbrw850AHZftlFHlr1Cd+Zw==",
+      "type": "package",
+      "path": "servicestack.text/5.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ServiceStack.Text.dll",
+        "lib/net45/ServiceStack.Text.xml",
+        "lib/netcoreapp2.1/ServiceStack.Text.deps.json",
+        "lib/netcoreapp2.1/ServiceStack.Text.dll",
+        "lib/netcoreapp2.1/ServiceStack.Text.xml",
+        "lib/netstandard2.0/ServiceStack.Text.deps.json",
+        "lib/netstandard2.0/ServiceStack.Text.dll",
+        "lib/netstandard2.0/ServiceStack.Text.xml",
+        "servicestack.text.5.4.0.nupkg.sha512",
+        "servicestack.text.nuspec"
+      ]
+    },
+    "SharpZipLib/1.0.0": {
+      "sha512": "38egGevtPMQn/6olZZUteKUC7+BD47LdCGKo9Vyj17+HWDwiqPXsyJu55q9WSybhwVKwt0q2FLhiuJjZfQpsHw==",
+      "type": "package",
+      "path": "sharpziplib/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/ICSharpCode.SharpZipLib.dll",
+        "lib/net45/ICSharpCode.SharpZipLib.xml",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.dll",
+        "lib/netstandard2.0/ICSharpCode.SharpZipLib.xml",
+        "sharpziplib.1.0.0.nupkg.sha512",
+        "sharpziplib.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {
@@ -2590,6 +3351,127 @@
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "System.Data.SQLite/1.0.109.2": {
+      "sha512": "dsN3a0THLGDu1QDHGdhETU9rgr1tU0IOwnnOQHTR2huXU6HS/o/Nbq1Bol6jrLM3GqQrdNjPxVPZUPaYDRhT4Q==",
+      "type": "package",
+      "path": "system.data.sqlite/1.0.109.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "system.data.sqlite.1.0.109.2.nupkg.sha512",
+        "system.data.sqlite.nuspec"
+      ]
+    },
+    "System.Data.SQLite.Core/1.0.109.2": {
+      "sha512": "eZuKsu2eriGsxsAAlVslcA4ylLnFmfpA3iWeUyU82RNz4yDYlwLAA/zkbxejCEO+GdTd0zSBN4kDHneM39PEsg==",
+      "type": "package",
+      "path": "system.data.sqlite.core/1.0.109.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net20/System.Data.SQLite.Core.targets",
+        "build/net20/x64/SQLite.Interop.dll",
+        "build/net20/x86/SQLite.Interop.dll",
+        "build/net40/System.Data.SQLite.Core.targets",
+        "build/net40/x64/SQLite.Interop.dll",
+        "build/net40/x86/SQLite.Interop.dll",
+        "build/net45/System.Data.SQLite.Core.targets",
+        "build/net45/x64/SQLite.Interop.dll",
+        "build/net45/x86/SQLite.Interop.dll",
+        "build/net451/System.Data.SQLite.Core.targets",
+        "build/net451/x64/SQLite.Interop.dll",
+        "build/net451/x86/SQLite.Interop.dll",
+        "build/net46/System.Data.SQLite.Core.targets",
+        "build/net46/x64/SQLite.Interop.dll",
+        "build/net46/x86/SQLite.Interop.dll",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.dll.config",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.dll.config",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/net45/System.Data.SQLite.dll",
+        "lib/net45/System.Data.SQLite.dll.config",
+        "lib/net45/System.Data.SQLite.xml",
+        "lib/net451/System.Data.SQLite.dll",
+        "lib/net451/System.Data.SQLite.dll.config",
+        "lib/net451/System.Data.SQLite.xml",
+        "lib/net46/System.Data.SQLite.dll",
+        "lib/net46/System.Data.SQLite.dll.config",
+        "lib/net46/System.Data.SQLite.xml",
+        "lib/netstandard2.0/System.Data.SQLite.dll",
+        "lib/netstandard2.0/System.Data.SQLite.dll.config",
+        "lib/netstandard2.0/System.Data.SQLite.xml",
+        "runtimes/linux-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/osx-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll",
+        "system.data.sqlite.core.1.0.109.2.nupkg.sha512",
+        "system.data.sqlite.core.nuspec"
+      ]
+    },
+    "System.Data.SQLite.EF6/1.0.109": {
+      "sha512": "1DbR0GQkbhEzr59vGaMBSbwSQeB8+iQnEbujRz6GIvawp9VBZjXLaUfDPjHEQTs9rwhJAYRZgT9j2ObM6OPE6g==",
+      "type": "package",
+      "path": "system.data.sqlite.ef6/1.0.109",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net40/app.config.install.xdt",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.install.xdt",
+        "content/net40/web.config.transform",
+        "content/net45/app.config.install.xdt",
+        "content/net45/app.config.transform",
+        "content/net45/web.config.install.xdt",
+        "content/net45/web.config.transform",
+        "content/net451/app.config.install.xdt",
+        "content/net451/app.config.transform",
+        "content/net451/web.config.install.xdt",
+        "content/net451/web.config.transform",
+        "content/net46/app.config.install.xdt",
+        "content/net46/app.config.transform",
+        "content/net46/web.config.install.xdt",
+        "content/net46/web.config.transform",
+        "lib/net40/System.Data.SQLite.EF6.dll",
+        "lib/net45/System.Data.SQLite.EF6.dll",
+        "lib/net451/System.Data.SQLite.EF6.dll",
+        "lib/net46/System.Data.SQLite.EF6.dll",
+        "system.data.sqlite.ef6.1.0.109.nupkg.sha512",
+        "system.data.sqlite.ef6.nuspec",
+        "tools/net40/install.ps1",
+        "tools/net45/install.ps1",
+        "tools/net451/install.ps1",
+        "tools/net46/install.ps1"
+      ]
+    },
+    "System.Data.SQLite.Linq/1.0.109": {
+      "sha512": "bGGAKuKmsDgCnMJG3OouR/p2O3gWtaJeU7aICOqx7IlSqZz+GXuY+K3z9EEK9FL7Rr/jode4aCqpCcYBeLxerw==",
+      "type": "package",
+      "path": "system.data.sqlite.linq/1.0.109",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net20/app.config.transform",
+        "content/net20/web.config.transform",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.transform",
+        "content/net45/app.config.transform",
+        "content/net45/web.config.transform",
+        "content/net451/app.config.transform",
+        "content/net451/web.config.transform",
+        "content/net46/app.config.transform",
+        "content/net46/web.config.transform",
+        "lib/net20/System.Data.SQLite.Linq.dll",
+        "lib/net40/System.Data.SQLite.Linq.dll",
+        "lib/net45/System.Data.SQLite.Linq.dll",
+        "lib/net451/System.Data.SQLite.Linq.dll",
+        "lib/net46/System.Data.SQLite.Linq.dll",
+        "system.data.sqlite.linq.1.0.109.nupkg.sha512",
+        "system.data.sqlite.linq.nuspec"
       ]
     },
     "System.Diagnostics.DiagnosticSource/4.5.0": {
@@ -2915,10 +3797,84 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "System.ValueTuple/4.5.0": {
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "type": "package",
+      "path": "system.valuetuple/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.ValueTuple.dll",
+        "lib/net461/System.ValueTuple.xml",
+        "lib/net47/System.ValueTuple.dll",
+        "lib/net47/System.ValueTuple.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.ValueTuple.dll",
+        "lib/netstandard1.0/System.ValueTuple.xml",
+        "lib/netstandard2.0/_._",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "lib/portable-net40+sl4+win8+wp8/System.ValueTuple.xml",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net461/System.ValueTuple.dll",
+        "ref/net47/System.ValueTuple.dll",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard2.0/_._",
+        "ref/portable-net40+sl4+win8+wp8/System.ValueTuple.dll",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.valuetuple.4.5.0.nupkg.sha512",
+        "system.valuetuple.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Z.Expressions.Eval/2.9.5": {
+      "sha512": "BR303qJ8RSLYOSckH3n7r6iuspPJPMWalI2qjW84iREMJ/aiMTS5m3eGP6sh6TD45wDgWYFsWnPmsiC6RJw/hQ==",
+      "type": "package",
+      "path": "z.expressions.eval/2.9.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Z.Expressions.Eval.dll",
+        "lib/net40/Z.Expressions.Eval.xml",
+        "lib/net45/Z.Expressions.Eval.dll",
+        "lib/net45/Z.Expressions.Eval.xml",
+        "lib/netstandard1.3/Z.Expressions.Eval.dll",
+        "lib/netstandard1.3/Z.Expressions.Eval.xml",
+        "lib/netstandard2.0/Z.Expressions.Eval.dll",
+        "lib/netstandard2.0/Z.Expressions.Eval.xml",
+        "z.expressions.eval.2.9.5.nupkg.sha512",
+        "z.expressions.eval.nuspec"
+      ]
+    },
+    "MM.Engine/1.0.0": {
+      "type": "project",
+      "path": "../MM.Engine/MM.Engine.csproj",
+      "msbuildProject": "../MM.Engine/MM.Engine.csproj"
+    },
+    "MM.Helper/1.0.0": {
+      "type": "project",
+      "path": "../MM.Helper/MM.Helper.csproj",
+      "msbuildProject": "../MM.Helper/MM.Helper.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.6.1": [
+      "MM.Engine >= 1.0.0",
       "Microsoft.AspNetCore >= 2.1.7",
       "Microsoft.AspNetCore.StaticFiles >= 2.2.0",
       "Newtonsoft.Json >= 12.0.2"
@@ -2957,7 +3913,11 @@
       },
       "frameworks": {
         "net461": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\MM_PC\\MM.Engine\\MM.Engine.csproj": {
+              "projectPath": "F:\\MM_PC\\MM.Engine\\MM.Engine.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

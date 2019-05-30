@@ -1,7 +1,7 @@
-﻿using System.Diagnostics;
-using System.Windows;
-using System;
+﻿using System;
+using System.Diagnostics;
 using System.Threading;
+using System.Windows;
 
 namespace MM_PC
 {
@@ -21,6 +21,11 @@ namespace MM_PC
         public Config Config = new Config();
 
         /// <summary>
+        /// 访问地址
+        /// </summary>
+        public string Url = "";
+
+        /// <summary>
         /// 构造函数
         /// </summary>
         public MainWindow()
@@ -35,10 +40,11 @@ namespace MM_PC
         /// <param name="e">事件参</param>
         private void MainWindow1_Loaded(object sender, RoutedEventArgs e)
         {
+            var url = string.IsNullOrEmpty(Url) ? Config.Url : Url;
             External = new External(this);
             OpenWeb();
             // Viewer.DocumentText = "<html><body>123123</body></html>";
-            Browser1.Navigate(Config.Url);
+            Browser1.Navigate(url);
             //  Viewer.CreateObjRef(CallbackClass.GetType());
         }
 
@@ -59,7 +65,7 @@ namespace MM_PC
         /// <param name="e">事件参</param>
         private void Browser1_DocumentCompleted(object sender, System.Windows.Forms.WebBrowserDocumentCompletedEventArgs e)
         {
-            
+            Browser1.GetScriptManager.ScriptObject = External;
         }
 
         /// <summary>
@@ -83,9 +89,8 @@ namespace MM_PC
             Thread.Sleep(2000);
         }
 
-        private void Browser1_Load(object sender, System.EventArgs e)
+        private void Browser1_Navigated(object sender, System.Windows.Forms.WebBrowserNavigatedEventArgs e)
         {
-            // 引入脚本
             Browser1.GetScriptManager.ScriptObject = External;
         }
     }

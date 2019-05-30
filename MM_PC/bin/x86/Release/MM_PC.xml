@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MM_PC</name>
+    </assembly>
+    <members>
+        <member name="T:MM_PC.Config">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="P:MM_PC.Config.Url">
+            <summary>
+            访问网址
+            </summary>
+        </member>
+        <member name="P:MM_PC.Config.AppFile">
+            <summary>
+            应用路径
+            </summary>
+        </member>
+        <member name="P:MM_PC.Config.Reset">
+            <summary>
+            是否重新启动
+            </summary>
+        </member>
+        <member name="T:MM_PC.External">
+            <summary>
+            提供给外部使用的类
+            </summary>
+        </member>
+        <member name="F:MM_PC.External.Window">
+            <summary>
+            窗口类
+            </summary>
+        </member>
+        <member name="F:MM_PC.External.SubWindow">
+            <summary>
+            窗口类
+            </summary>
+        </member>
+        <member name="F:MM_PC.External.sdk">
+            <summary>
+            常用帮助类
+            </summary>
+        </member>
+        <member name="F:MM_PC.External.eng">
+            <summary>
+            脚本引擎类
+            </summary>
+        </member>
+        <member name="F:MM_PC.External.sys">
+            <summary>
+            系统服务帮助类
+            </summary>
+        </member>
+        <member name="F:MM_PC.External.Load_val">
+            <summary>
+            加载进度 0 - 100
+            </summary>
+        </member>
+        <member name="F:MM_PC.External.runPath">
+            <summary>
+            程序路径
+            </summary>
+        </member>
+        <member name="M:MM_PC.External.RunPath">
+            <summary>
+            获取程序路径
+            </summary>
+            <returns>返回全路径</returns>
+        </member>
+        <member name="M:MM_PC.External.Loading">
+            <summary>
+            加载进度 0 - 100
+            </summary>
+            <returns>返回进度值</returns>
+        </member>
+        <member name="M:MM_PC.External.GetError">
+            <summary>
+            获取脚本执行错误
+            </summary>
+            <returns>返回错误信息</returns>
+        </member>
+        <member name="M:MM_PC.External.#ctor(System.Windows.Window)">
+            <summary>
+            初始化
+            </summary>
+            <param name="win">传递主窗口</param>
+        </member>
+        <member name="M:MM_PC.External.CallScript(System.String,System.Object,System.Object,System.Object,System.Object)">
+            <summary>
+            执行脚本
+            </summary>
+            <param name="appName">应用名</param>
+            <param name="fun">函数名</param>
+            <param name="param1">参数1</param>
+            <param name="param2">参数2</param>
+            <param name="param3">参数3</param>
+            <returns>返回执行结果</returns>
+        </member>
+        <member name="M:MM_PC.External.MsgBox(System.String,System.String)">
+            <summary>
+            给js调用的提示框
+            </summary>
+            <param name="text">显示消息</param>
+            <param name="title">显示标题</param>
+        </member>
+        <member name="M:MM_PC.External.OpenFileDialog(System.String,System.String,System.String)">
+            <summary>
+            文件对话框
+            </summary>
+            <param name="directory">默认目录</param>
+            <param name="defaultExt">默认格式</param>
+            <param name="filter">过滤文件</param>
+            <returns>返回选择的路径</returns>
+        </member>
+        <member name="M:MM_PC.External.SaveFileDialog(System.String,System.String,System.String)">
+            <summary>
+            文件对话框
+            </summary>
+            <param name="directory">默认目录</param>
+            <param name="defaultExt">默认格式</param>
+            <param name="filter">过滤文件</param>
+            <returns>返回选择的路径</returns>
+        </member>
+        <member name="M:MM_PC.External.CommonOpenFileDialog(System.String)">
+            <summary>
+            目录对话框
+            </summary>
+            <param name="directory">默认目录</param>
+            <returns>返回目录</returns>
+        </member>
+        <member name="M:MM_PC.External.PreventSleep(System.Boolean)">
+             <summary>
+            阻止系统休眠，直到线程结束恢复休眠策略
+             </summary>
+             <param name="includeDisplay">是否阻止关闭显示器</param>
+        </member>
+        <member name="M:MM_PC.External.ResotreSleep">
+            <summary>
+            恢复休眠
+            </summary>
+        </member>
+        <member name="M:MM_PC.External.NewWindow(System.String,System.String)">
+            <summary>
+            新窗口
+            </summary>
+            <param name="url">网址</param>
+            <param name="title">标题</param>
+        </member>
+        <member name="T:MM_PC.SubWindow">
+            <summary>
+            SubWindow.xaml 的交互逻辑
+            </summary>
+            <summary>
+            SubWindow
+            </summary>
+        </member>
+        <member name="F:MM_PC.SubWindow.External">
+            <summary>
+            回调类
+            </summary>
+        </member>
+        <member name="F:MM_PC.SubWindow.Config">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="F:MM_PC.SubWindow.Url">
+            <summary>
+            访问地址
+            </summary>
+        </member>
+        <member name="M:MM_PC.SubWindow.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MM_PC.SubWindow.#ctor(System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="url">访问链接</param>
+            <param name="title">新窗口标题</param>
+        </member>
+        <member name="M:MM_PC.SubWindow.SubWindow1_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            窗口加载完成时
+            </summary>
+            <param name="sender">发送器</param>
+            <param name="e">事件参</param>
+        </member>
+        <member name="M:MM_PC.SubWindow.SubWindow1_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            窗口关闭时
+            </summary>
+            <param name="sender">发送器</param>
+            <param name="e">事件参</param>
+        </member>
+        <member name="M:MM_PC.SubWindow.Browser2_DocumentCompleted(System.Object,System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)">
+            <summary>
+            文档加载完成时
+            </summary>
+            <param name="sender">发送器</param>
+            <param name="e">事件参</param>
+        </member>
+        <member name="M:MM_PC.SubWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MM_PC.SystemHelper">
+            <summary>
+            系统帮助类
+            </summary>
+        </member>
+        <member name="M:MM_PC.SystemHelper.PreventSleep(System.Boolean)">
+             <summary>
+            阻止系统休眠，直到线程结束恢复休眠策略
+             </summary>
+             <param name="includeDisplay">是否阻止关闭显示器</param>
+        </member>
+        <member name="M:MM_PC.SystemHelper.ResotreSleep">
+             <summary>
+            恢复系统休眠策略
+             </summary>
+        </member>
+        <member name="M:MM_PC.SystemHelper.ResetSleepTimer(System.Boolean)">
+             <summary>
+            重置系统休眠计时器
+             </summary>
+             <param name="includeDisplay">是否阻止关闭显示器</param>
+        </member>
+        <member name="T:MM_PC.App">
+            <summary>
+            App.xaml 的交互逻辑
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:MM_PC.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:MM_PC.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:MM_PC.MainWindow">
+            <summary>
+            MainWindow.xaml 的交互逻辑
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:MM_PC.MainWindow.External">
+            <summary>
+            回调类
+            </summary>
+        </member>
+        <member name="F:MM_PC.MainWindow.Config">
+            <summary>
+            配置文件
+            </summary>
+        </member>
+        <member name="F:MM_PC.MainWindow.Url">
+            <summary>
+            访问地址
+            </summary>
+        </member>
+        <member name="M:MM_PC.MainWindow.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:MM_PC.MainWindow.MainWindow1_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            窗口加载完成时
+            </summary>
+            <param name="sender">发送器</param>
+            <param name="e">事件参</param>
+        </member>
+        <member name="M:MM_PC.MainWindow.MainWindow1_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            窗口关闭时
+            </summary>
+            <param name="sender">发送器</param>
+            <param name="e">事件参</param>
+        </member>
+        <member name="M:MM_PC.MainWindow.Browser1_DocumentCompleted(System.Object,System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)">
+            <summary>
+            文档加载完成时
+            </summary>
+            <param name="sender">发送器</param>
+            <param name="e">事件参</param>
+        </member>
+        <member name="M:MM_PC.MainWindow.OpenWeb">
+            <summary>
+            打开web服务
+            </summary>
+        </member>
+        <member name="M:MM_PC.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MM_PC.Properties.Resources">
+            <summary>
+              强类型资源类，用于查找本地化字符串等。
+            </summary>
+        </member>
+        <member name="P:MM_PC.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:MM_PC.Properties.Resources.Culture">
+            <summary>
+              覆盖当前线程的 CurrentUICulture 属性
+              使用此强类型的资源类的资源查找。
+            </summary>
+        </member>
+    </members>
+</doc>

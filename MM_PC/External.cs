@@ -1,6 +1,8 @@
 ﻿using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using MM.Helper;
+using System.Diagnostics;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Windows;
@@ -14,7 +16,15 @@ namespace MM_PC
     [ComVisible(true)]  // 将该类设置为com可访问
     public class External
     {
-        public MainWindow mainWindow;
+        /// <summary>
+        /// 窗口类
+        /// </summary>
+        public Window Window;
+
+        /// <summary>
+        /// 窗口类
+        /// </summary>
+        public SubWindow SubWindow;
 
         /// <summary>
         /// 常用帮助类
@@ -31,7 +41,16 @@ namespace MM_PC
         /// </summary>
         public static SystemHelper sys = new SystemHelper();
 
-        public static Cache Cache = new Cache();
+
+        /// <summary>
+        /// 加载进度 0 - 100
+        /// </summary>
+        public static double Load_val = 0;
+
+        /// <summary>
+        /// 程序路径
+        /// </summary>
+        public static string runPath = Directory.GetCurrentDirectory() + "\\";
 
 
         /// <summary>
@@ -40,7 +59,7 @@ namespace MM_PC
         /// <returns>返回全路径</returns>
         public string RunPath()
         {
-            return Cache.RunPath;
+            return runPath;
         }
 
         /// <summary>
@@ -49,7 +68,7 @@ namespace MM_PC
         /// <returns>返回进度值</returns>
         public double Loading()
         {
-            return Cache.Loading;
+            return Load_val;
         }
 
         /// <summary>
@@ -64,10 +83,10 @@ namespace MM_PC
         /// <summary>
         /// 初始化
         /// </summary>
-        /// <param name="main">传递主窗口</param>
-        public External(MainWindow main)
+        /// <param name="win">传递主窗口</param>
+        public External(Window win)
         {
-            mainWindow = main;
+            Window = win;
         }
 
         /// <summary>
@@ -185,6 +204,18 @@ namespace MM_PC
         public void ResotreSleep()
         {
             sys.ResotreSleep();
+        }
+
+        /// <summary>
+        /// 新窗口
+        /// </summary>
+        /// <param name="url">网址</param>
+        /// <param name="title">标题</param>
+        public void NewWindow(string url = null, string title = null)
+        {
+            Debug.WriteLine(url + title);
+            SubWindow = new SubWindow(url, title);
+            SubWindow.Show();
         }
     }
 }

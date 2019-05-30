@@ -8,14 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/404.html")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/css/index.css")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/index.html")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/js/com.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/js/index.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/js/polyfill.min.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/js/vue.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/js/wpf.js")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("wwwroot/js/zepto.min.js")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("lib/site-packages/readme.txt")]
 
 

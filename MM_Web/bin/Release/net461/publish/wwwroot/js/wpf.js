@@ -12,15 +12,19 @@ function msgBox(text, title) {
 /// param2：参数2
 /// param3：参数3
 /// 返回：执行结果
-function callScript(type, file, fun, param, paramB) {
-    return window.external.CallScript(type, file, fun, param, paramB);
+function callScript(appName, fun, param, paramB, paramC) {
+    if (!param) { param = ""; }
+    if (!paramB) { paramB = ""; }
+    if (!paramC) { paramC = ""; }
+    return window.external.CallScript(appName, fun, param, paramB, paramC);
 }
 
-/// 测试调用脚本
-function test() {
-    var tx = callScript("./test.py", "测试", "测试");
-    msgBox(tx);
+/// 获取脚本执行错误
+/// 返回：执行结果
+function getError() {
+    return window.external.getError();
 }
+
 
 /// 弹出打开文件框
 /// directory：目录
@@ -39,7 +43,7 @@ function openFileDialog(directory, defaultExt, filter) {
 /// filter：过滤文件
 function saveFileDialog(directory, defaultExt, filter) {
     if (!directory) { directory = "c:\\"; }
-    if (!defaultExt) { defaultExt = ".xlsx" }
+    if (!defaultExt) { defaultExt = ".xlsx"; }
     if (!filter) { filter = "Microsoft Excel 97-2003文件(*.xls)|*.xls|Microsoft Excel文件(*.xlsx)|*.xlsx"; }
     return window.external.SaveFileDialog(directory, defaultExt, filter);
 }
@@ -52,15 +56,13 @@ function commonOpenFileDialog(directory) {
 }
 
 /// 加载进度
-function loading()
-{
+function loading() {
     return window.external.Loading();
 }
 
 /// 阻止系统休眠，用于长时间的加载时
 function preventSleep(includeDisplay) {
-    if (includeDisplay === null)
-    {
+    if (includeDisplay === null) {
         includeDisplay = false;
     }
     return window.external.PreventSleep(includeDisplay);
@@ -69,4 +71,19 @@ function preventSleep(includeDisplay) {
 /// 恢复系统休眠
 function resotreSleep() {
     return window.external.ResotreSleep();
+}
+
+/// 创建新窗口
+/// url：网址
+/// title：标题
+function newWindow(url, title) {
+    return window.external.NewWindow(url, title);
+}
+
+/// 测试调用脚本
+function test() {
+    var tx = callScript("./script/test.py", "测试", "测试", "测试");
+    msgBox(tx, "测试脚本");
+    msgBox(getError(), "测试脚本");
+    newWindow("http://www.baidu.com", "超级美眉介绍");
 }

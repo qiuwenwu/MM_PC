@@ -2,7 +2,9 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using MM.Engine;
 using System.IO;
+using System.Text;
 
 namespace MM_Web
 {
@@ -12,10 +14,14 @@ namespace MM_Web
     public class Startup
     {
         /// <summary>
+        /// 索引
+        /// </summary>
+        public static Indexer Indexer = new Indexer();
+
+        /// <summary>
         /// 服务集合
         /// </summary>
         public IServiceCollection Services;
-
 
         /// <summary>
         /// 配置服务
@@ -42,25 +48,98 @@ namespace MM_Web
 
             app.Run(async (context) =>
             {
-                var p = context.Request.Path.Value;
-                if (p.IndexOf(".") == -1)
+                var res = context.Response;
+                var req = context.Request;
+                var p = req.Path.Value;
+                if (p.StartsWith("/api"))
                 {
-                    if (p.EndsWith("/")) {
-                        p += "index";
+                    var ret = "";
+                    if (p == "/api/" || p == "/api")
+                    {
+                        ret = "欢迎使用超级美眉接口，/api/后面接文件路径，启动对应脚本文件，可传入url参数和body参数，返回json或xml、text";
+                        res.ContentType = @"text/plain; charset=utf-8";
                     }
-                    p += ".html";
-                }
-                var file = Program.Dir + @"wwwroot" + p.Replace("/", "\\");
+                    else {
+                        var file = p.Replace("/api", Program.Dir + "script").Replace("/", "\\");
+                       
+                        if (file.IndexOf(".") == -1)
+                        {
+                            var py = file + ".py";
+                            var cs = file + ".cs";
+                            var lua = file + ".lua";
 
-                if (File.Exists(file))
-                {
-                    context.Response.ContentType = @"text/html; charset=utf-8";
-                    await context.Response.WriteAsync(File.ReadAllText(file));
+                            if (File.Exists(py))
+                            {
+                                file = py;
+                            }
+                            else if (File.Exists(cs))
+                            {
+                                file = cs;
+                            }
+                            else if (File.Exists(lua))
+                            {
+                                file = lua;
+                            }
+                        }
+                        if (File.Exists(file))
+                        {
+                            StreamReader reader = new StreamReader(req.Body);
+                            string body = reader.ReadToEnd();
+                            byte[] array = Encoding.ASCII.GetBytes(body);
+                           
+                            var obj = Indexer.Run(file, "api", req.QueryString.Value, body, "");
+
+                            if (obj != null) {
+                                ret = obj.ToString();
+                            }
+                        }
+                    }
+
+                    if (!string.IsNullOrEmpty(ret))
+                    {
+                        ret = ret.Trim();
+                        if (ret.StartsWith("<") && ret.EndsWith(">"))
+                        {
+                            if (ret.StartsWith("<xml"))
+                            {
+                                res.ContentType = @"text/xml; charset=utf-8";
+                            }
+                            else
+                            {
+                                res.ContentType = @"text/html; charset=utf-8";
+                            }
+                        }
+                        else if ((ret.StartsWith("{") && ret.EndsWith("}")) || (ret.StartsWith("[") && ret.EndsWith("]")))
+                        {
+                            res.ContentType = @"application/json; charset=utf-8";
+                        }
+                        else {
+                            res.ContentType = @"text/plain; charset=utf-8";
+                        }
+                        await res.WriteAsync(ret);
+                    }
                 }
-                else
-                {
-                    context.Response.ContentType = @"text/plain; charset=utf-8";
-                    await context.Response.WriteAsync("欢迎使用超级美眉混合型PC应用，请现在wwwroot目录下放置index.html文件开始使用！");
+                else {
+                    if (p.IndexOf(".") == -1)
+                    {
+                        if (p.EndsWith("/"))
+                        {
+                            p += "index";
+                        }
+                        p += ".html";
+                    }
+                    var file = Program.Dir + @"wwwroot" + p.Replace("/", "\\");
+
+                    if (File.Exists(file))
+                    {
+                        res.ContentType = @"text/html; charset=utf-8";
+                        await res.WriteAsync(File.ReadAllText(file));
+                    }
+                    else
+                    {
+                        res.ContentType = @"text/plain; charset=utf-8";
+                        await res.WriteAsync("欢迎使用超级美眉混合型PC应用，请现在wwwroot目录下放置index.html文件开始使用！");
+                    }
                 }
             });
         }
