@@ -1,32 +1,75 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<!-- saved from url=(0016)http://localhost -->
-<head>
-    <meta charset="UTF-8">
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/main.css">
+	<!-- saved from url=(0016)http://localhost -->
+	<head>
+		<meta charset="UTF-8">
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="/css/index.css">
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/main.css">
 
-    <!-- 引入wpf交互库 -->
-    <script type="text/javascript" src="/js/wpf.js"></script>
-    <!-- 先引入 Vue -->
-    <script type="text/javascript" src="/js/vue.js"></script>
-
-    <style>
-        a {
+		<style>
+			a {
             text-decoration: none;
         }
     </style>
-</head>
-<body>
-    <div id="app">
-        超级美眉界面
-        <img src="/img/demo.jpg">
-    </div>
-	<!-- 业务库 -->
-    <script type="text/javascript" src="/js/main.js"></script>
-    <script>
-        test();
-    </script>
-</body>
+	</head>
+	<body>
+		<div id="app">
+			<nav id="nav_main" class="navbar navbar-expand-sm navbar-dark bg-dark">
+				<a class="navbar-brand" target="frame_body" href="/pages/index">理财宝</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item" v-bind:class="{ 'active': index == 'config' }" @click="index = 'config'">
+							<a class="nav-link" target="frame_body" href="/pages/config">配置</a>
+						</li>
+						<li class="nav-item" v-bind:class="{ 'active': index == 'coin' }" @click="index = 'coin'">
+							<a class="nav-link" target="frame_body" href="/pages/coin">货币选择</a>
+						</li>
+						<li class="nav-item" v-bind:class="{ 'active': index == 'stock' }" @click="index = 'stock'">
+							<a class="nav-link" target="frame_body" href="/pages/stock">股票选择</a>
+						</li>
+						<li class="nav-item" v-bind:class="{ 'active': index == 'record' }" @click="index = 'record'">
+							<a class="nav-link" target="frame_body" href="/pages/record">交易记录</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+							 aria-haspopup="true" aria-expanded="false">
+								关于
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" target="frame_body" href="/pages/help" v-bind:class="{ 'active': index == 'help' }" @click="index = 'help'">使用说明</a>
+								<a class="dropdown-item" target="frame_body" href="/pages/buy" v-bind:class="{ 'active': index == 'buy' }" @click="index = 'buy'">购买方式</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" target="frame_body" href="/pages/service" v-bind:class="{ 'active': index == 'service' }" @click="index = 'service'">联系客服</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
+			<iframe name="frame_body" class="content" src="/pages/index.html"></iframe>
+		</div>
+
+		<!-- 业务库 -->
+		<script type="text/javascript" src="/js/jquery.slim.min.js"></script>
+		<script type="text/javascript" src="/js/popper.min.js"></script>
+		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		
+		<script type="text/javascript" src="/js/vue.js"></script>
+		<script>
+			var vue = new Vue({
+				el: "#app",
+				data(){
+					return {
+						index: "index"
+					}
+				}
+			});
+		</script>
+	</body>
 </html>

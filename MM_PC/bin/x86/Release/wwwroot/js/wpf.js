@@ -84,6 +84,6 @@ function newWindow(url, title) {
 function test() {
     var tx = callScript("./script/test.py", "测试", "测试", "测试");
     msgBox(tx, "测试脚本");
-    msgBox(getError(), "测试脚本");
-    newWindow("http://www.baidu.com", "超级美眉介绍");
+    //msgBox(getError(), "测试脚本");
+    //newWindow("http://www.baidu.com", "超级美眉介绍");
 }
